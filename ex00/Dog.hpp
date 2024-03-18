@@ -13,15 +13,11 @@ public :
 	Dog(void);
 	Dog(std::string const & type);
 	Dog(Dog const & copy);
-	~Dog(void);
+	virtual ~Dog(void);
 
 	Dog & operator =(Dog const & src);
 
 	void makeSound(void) const;
-	std::string getType(void) const;
-
-private :
-
 
 };
 

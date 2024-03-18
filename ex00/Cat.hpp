@@ -12,15 +12,11 @@ public :
 
 	Cat(void);
 	Cat(Cat const & copy);
-	~Cat(void);
+	virtual ~Cat(void);
 
 	Cat & operator =(Cat const & src);
 
 	void makeSound(void) const;
-	std::string getType(void) const;
-
-private :
-
 
 };
 

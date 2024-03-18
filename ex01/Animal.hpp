@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Brain.hpp"
 
 //virtual is used so : const Animal * j = new Dog();
 //j->makeSound();
@@ -20,7 +21,8 @@ public :
     Animal & operator =(Animal const & src);
 
     virtual void makeSound(void) const;
-    virtual std::string getType(void) const;
+    std::string getType(void) const;
+    void    setType(std::string type);
 
 protected :
 

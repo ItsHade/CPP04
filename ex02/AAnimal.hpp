@@ -3,10 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "Brain.hpp"
 
-//virtual is used so : const AAnimal * j = new Dog();
-//j->makeSound();
-//outputs the sound of the dog and not the default AAnimal noise
+
 class AAnimal
 {
 
@@ -15,12 +14,13 @@ public :
     AAnimal(void);
     AAnimal(std::string type);
     AAnimal(AAnimal const & copy);
-    virtual ~AAnimal(void) = 0;
+    virtual ~AAnimal(void);
 
     AAnimal & operator =(AAnimal const & src);
 
-    virtual void makeSound(void) const;
-    virtual std::string getType(void) const;
+    virtual void makeSound(void) const = 0;
+    std::string getType(void) const;
+    void    setType(std::string type);
 
 protected :
 

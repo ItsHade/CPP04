@@ -21,8 +21,9 @@ WrongCat::~WrongCat(void)
 
 WrongCat & WrongCat::operator =(WrongCat const & src)
 {
-		std::cout << "WrongCat Assignation operator called" << std::endl;
-	_type = src.getType();
+	std::cout << "WrongCat Assignation operator called" << std::endl;
+	if (this != &src)
+		_type = src.getType();
 	return (*this);
 }
 
@@ -30,10 +31,5 @@ void WrongCat::makeSound(void) const
 {
 	std::cout << "Wrong Miaouu.." << std::endl;
 	return ;
-}
-
-std::string WrongCat::getType(void) const
-{
-	return (_type);
 }
 

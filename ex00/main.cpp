@@ -22,6 +22,7 @@ int main(void)
 		delete j;
 		delete i;
 	}
+	std::cout << std::endl;
 	{
 		const WrongAnimal* meta = new WrongAnimal();
 		const WrongAnimal* i = new WrongCat();

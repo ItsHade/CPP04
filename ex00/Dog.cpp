@@ -22,7 +22,8 @@ Dog::~Dog(void)
 Dog & Dog::operator =(Dog const & src)
 {
 	std::cout << "Dog Assignation operator called" << std::endl;
-	_type = src.getType();
+	if (this != &src)
+		_type = src.getType();
 	return (*this);
 }
 
@@ -30,9 +31,4 @@ void Dog::makeSound(void) const
 {
 	std::cout << "Wooof.." << std::endl;
 	return ;
-}
-
-std::string Dog::getType(void) const
-{
-	return (_type);
 }

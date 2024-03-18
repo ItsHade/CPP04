@@ -21,8 +21,9 @@ Cat::~Cat(void)
 
 Cat & Cat::operator =(Cat const & src)
 {
-		std::cout << "Cat Assignation operator called" << std::endl;
-	_type = src.getType();
+	std::cout << "Cat Assignation operator called" << std::endl;
+	if (this != &src)
+		_type = src.getType();
 	return (*this);
 }
 
@@ -31,9 +32,3 @@ void Cat::makeSound(void) const
 	std::cout << "Miaouu.." << std::endl;
 	return ;
 }
-
-std::string Cat::getType(void) const
-{
-	return (_type);
-}
-

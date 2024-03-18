@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+#define BRAIN_SIZE 100
+
 class Brain
 {
 
@@ -15,11 +17,12 @@ public :
 
 	Brain & operator =(Brain const & src);
 
+	std::string getIdea(unsigned int nb) const ;
+
 
 private :
 
-	std::string *_ideas;
-
+	std::string _ideas[BRAIN_SIZE];
 
 };
 

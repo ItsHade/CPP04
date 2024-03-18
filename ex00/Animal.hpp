@@ -20,7 +20,8 @@ public :
     Animal & operator =(Animal const & src);
 
     virtual void makeSound(void) const;
-    virtual std::string getType(void) const;
+    std::string getType(void) const;
+    void    setType(std::string type);
 
 protected :
 

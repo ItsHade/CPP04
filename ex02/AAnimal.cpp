@@ -28,7 +28,8 @@ AAnimal::~AAnimal(void)
 AAnimal & AAnimal::operator =(AAnimal const & src)
 {
     std::cout << "AAnimal Assignation operator called" << std::endl;
-    this->_type = src._type;
+    if (this != &src)
+     this->_type = src._type;
     return (*this);
 }
 
@@ -41,4 +42,10 @@ void AAnimal::makeSound(void) const
 std::string AAnimal::getType(void) const
 {
 	return (_type);
+}
+
+void AAnimal::setType(std::string type)
+{
+    _type = type;
+    return ;
 }
