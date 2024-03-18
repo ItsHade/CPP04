@@ -1,4 +1,4 @@
-SRC = main.cpp AMAteria.cpp
+SRC = main.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp AMateria.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
@@ -6,9 +6,12 @@ NAME = Materia
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 RM = rm -f
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
